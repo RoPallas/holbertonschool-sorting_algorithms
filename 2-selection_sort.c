@@ -17,11 +17,11 @@ void selection_sort(int *array, size_t size)
 	for (i = 0; i < size - 1; i++)
 	{
 		aux_p = i, aux_v = array[i];
-			for (j = i + 1; j < size; j++)
-			{
-				if (array[i] > array[j] && array[j] < aux_v)
-					aux_p = j, aux_v = array[j];
-			}
+		for (j = i + 1; j < size; j++)
+		{
+			if (array[i] > array[j] && array[j] < aux_v)
+				aux_p = j, aux_v = array[j];
+		}
 		if (aux_p != i)
 		{
 			swap_int(&array[i], &array[aux_p]);
@@ -38,8 +38,8 @@ void selection_sort(int *array, size_t size)
  */
 void swap_int(int *a, int *b)
 {
-        int c = *a;
+	int c = *a;
 
-        *a = *b;
-        *b = c;
+	*a = *b;
+	*b = c;
 }
