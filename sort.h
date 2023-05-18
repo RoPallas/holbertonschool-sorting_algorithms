@@ -26,19 +26,6 @@ void quick_sort(int *array, size_t size);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-/**
- * swap_int - swaps the value of two intergers
- * @a: first int
- * @b: second int
- *
- */
-void swap_int(int *a, int *b)
-{
-        int c = *a;
-
-        *a = *b;
-        *b = c;
-}
-
+void swap_int(int *a, int *b);
 
 #endif
