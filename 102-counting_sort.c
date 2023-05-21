@@ -6,7 +6,7 @@
 */
 void counting_sort(int *array, size_t size)
 {
-	int max = array[0];
+	int max;
 	int *output, *count;
 	size_t i;
 
@@ -14,15 +14,14 @@ void counting_sort(int *array, size_t size)
 		return;
 
 	output = (int *)malloc(size * sizeof(int));
-
 	if (output == NULL)
 		return;
-	for (i = 1; i < size; i++)
+
+	for (i = 0; i < size; i++)
 		if (array[i] > max)
 			max = array[i];
 
 	count = (int *)malloc((max + 1) * sizeof(int));
-
 	if (count == NULL)
 	{
 		free(output);
