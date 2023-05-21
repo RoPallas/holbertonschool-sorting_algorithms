@@ -15,6 +15,9 @@ void shell_sort(int *array, size_t size)
 	unsigned long int i, j, gap;
 	int temp;
 
+	if (array == NULL || size < 2)
+		return;
+
 	for (gap = 1; gap < size / 3; gap = gap * 3 + 1)
 		;
 
